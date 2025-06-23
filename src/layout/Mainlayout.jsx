@@ -4,12 +4,23 @@ import Footer from "../components/Footer";
 
 const Mainlayout = () => {
     return (
-        <div className="">
+        <div className="hover:">
+           <header>
+             {/* Navbar section */}
             <Navbar />
-           <div>
+           </header>
+        {/* main section */}
+           <main>
+            <div>
              <Outlet />
            </div>
-            <Footer />
+           </main>
+           
+           {/* footer section */}
+           <footer>
+        <Footer />
+           </footer>
+            
         </div>
     );
 };

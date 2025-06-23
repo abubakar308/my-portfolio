@@ -1,10 +1,13 @@
 import { Link } from "react-router";
+import logo from "../assets/logo.jpg"
 
 const Navbar = () => {
     return (
         <div className="mx-auto">
             <nav className="flex justify-between">
-                <h2><Link to="/">AB</Link></h2>
+                <Link to="/">
+                <img className="w-14 h-14" src={logo} alt="A" />
+                </Link>
                 <ul className="flex gap-2">
                     <Link to="/aboutme">About Me</Link>
                     <Link to='/projects'>Projects</Link>
