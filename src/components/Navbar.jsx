@@ -21,7 +21,7 @@ const Navbar = () => {
                     <li><NavLink to='/projects' className={({ isActive }) =>
     isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
   }>Projects</NavLink></li>
-                   <li> <NavLink className={({ isActive }) =>
+                   <li> <NavLink to='/blogs' className={({ isActive }) =>
     isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
   }>Blogs</NavLink></li>
                 </ul>
@@ -31,10 +31,10 @@ const Navbar = () => {
                 <li><a href="https://www.linkedin.com/in/abubakar308" target="_blank">
                 <FaLinkedin />
                 </a></li>
-                <li><a href="https://github.com/abubakar308" target="_blank">
+                <li><a className="hover:text-indigo-500" href="https://github.com/abubakar308" target="_blank">
                 <FaGithub />
                 </a></li>
-                <li><a href="" target="_blank"></a></li>
+                <li><a className="hover:text-indigo-500" href="" target="_blank"></a></li>
                </ul>
   <button onClick={()=>setIsopen(!isOpen)} className="md:hidden text-2xl">
                {isOpen ? <FaTimes /> : <FaBars />}
@@ -45,7 +45,7 @@ const Navbar = () => {
                
                {
                 isOpen && (
-                    <div className="md:hidden px-4 pt-4 pb-6 space-y-3 bg-white shadow">
+                    <div className="md:hidden fixed top-12 w-1/2 rounded-xl text-xl px-4 pt-4 pb-6 space-y-3 bg-gray-300 shadow">
                          <ul className="gap-6 font-medium">
                     <li><NavLink onClick={()=>setIsopen(false)} to="/aboutme" className={({ isActive }) =>
     isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
@@ -53,17 +53,17 @@ const Navbar = () => {
                     <li><NavLink onClick={()=>setIsopen(false)} to='/projects' className={({ isActive }) =>
     isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
   }>Projects</NavLink></li>
-                   <li> <NavLink onClick={()=>setIsopen(false)} className={({ isActive }) =>
+                   <li> <NavLink to='/blogs' onClick={()=>setIsopen(false)} className={({ isActive }) =>
     isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
   }>Blogs</NavLink></li>
                 </ul>
 
                 {/* social link */}
                <div className="text-2xl flex gap-4">
-                <a href="https://www.linkedin.com/in/abubakar308" target="_blank">
+                <a className="hover:text-indigo-500" href="https://www.linkedin.com/in/abubakar308" target="_blank" >
                 <FaLinkedin />
                 </a>
-                <a href="https://github.com/abubakar308" target="_blank">
+                <a className="hover:text-indigo-500" href="https://github.com/abubakar308" target="_blank">
                 <FaGithub />
                 </a>
                 <a href="" target="_blank"></a>
