@@ -10,10 +10,8 @@ const Mainlayout = () => {
             <Navbar />
            </header>
         {/* main section */}
-           <main>
-            <div>
+           <main className="container mx-auto">
              <Outlet />
-           </div>
            </main>
            
            {/* footer section */}

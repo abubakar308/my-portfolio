@@ -1,15 +1,25 @@
-import heroomage from "../assets/heroimage.png"
+import heroImage from "../assets/heroimage.png"
 const Hero = () => {
     return (
-        <div className="sm:flex justify-between items-center">
-            <div>
-        <h2 className="text-3xl">Hi there</h2>
-        <h2 className="text-3xl">I'm Md Abu Bakar Siddique</h2>
-        <h2 className="text-3xl">A passionate web developer</h2>
+        <div className="md:flex justify-between items-center">
+
+            {/* text section */}
+            <div className="text-left px-8 space-y-4 max-w-xl">
+        <h2 className="text-2xl sm:text-2xl text-gray-500">Hi there 👋</h2>
+        <h1 className="text-3xl sm:text-4xl font-bold">I'm <span className="text-indigo-500">Md Abu Bakar Siddique</span></h1>
+        <h2 className="text-2xl sm:text-3xl text-gray-300">A Fullstack developer (MERN) </h2>
             </div>
-            <div className="bg-amber-400 h-80 w-60 pb- -rotate-10">
-        <img className="h-full" src={heroomage} alt="" />
-            </div>
+
+            {/* hero image section */}
+      <div className="mt-10 sm:mt-0">
+        <div className="relative w-60 h-80 bg-lime-600 rounded-xl mx-auto transform -rotate-6 hover:rotate-0 transition duration-500">
+          <img
+            src={heroImage}
+            alt="Hero"
+            className="h-full w-full object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
         </div>
     );
 };
