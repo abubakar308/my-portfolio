@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="mt-6 flex justify-center sm:justify-start gap-4">
           <a href="">
             <button className="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition">
-              View Resume
+             <a href="https://drive.google.com/file/d/1909-oKKJPFXLi7hQQftmyn06D6pWJmc3/view?usp=sharing" target="_blank"> View Resume</a>
             </button>
           </a>
         </div>

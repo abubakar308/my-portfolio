@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className="container mx-auto px-4 py-10 gap-6">
 
-           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+           <div className="flex justify-around items-start gap-6">
              {/* menu links */}
             <div className="text-sm font-medium space-y-2">
                 <h3 className="text-lg font-semibold text-white mb-1">Menu</h3>
@@ -15,8 +15,8 @@ const Footer = () => {
             </div>
 
             {/* social links */}
-            <div className="text-sm font-medium space-y-2">
-                <h3 className="text-lg font-semibold text-white mb-1">social</h3>
+            <div className="text-lg flex flex-col font-medium gap-2">
+                <h3 className="font-semibold text-white mb-1">Social</h3>
                 <a className="hover:text-indigo-400 transition" href="https://www.linkedin.com/in/abubakar308" target="_blank" >
                                 <FaLinkedin />
                                 </a>
