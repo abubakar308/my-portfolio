@@ -1,7 +1,7 @@
 import heroImage from "../assets/heroimage.png"
 const Hero = () => {
     return (
-        <section className="md:flex justify-between p-4 mt-3 mb-16 items-center">
+        <section className="md:flex justify-between p-4 mt-6 mb-16 items-center">
 
             {/* text section */}
           <div>

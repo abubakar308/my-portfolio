@@ -34,20 +34,20 @@ const Skills = () => {
 
 
     return (
-        <section className="bg-gray-50 py-12 text-gray-800">
+        <section className="py-10">
             <div className="container mx-auto text-center px-4">
                 {/* skill title */}
-                <h2 className="text-3xl font-bold mb-8">My Skills</h2>
+                <h2 className="text-3xl text-indigo-600 font-bold mb-8">My Skills</h2>
 
                  {/* skills */}
                 {
-                    skills.map((skillset, index)=>(<div key={index} className="mb-10 text-left">
+                    skills.map((skillset, index)=>(<div key={index} className="mb-10 text-left text-indigo-500 font-semibold">
                         <h3 className="text-xl font-semibold mb-4">{skillset.category}</h3>
-                        <div className="flex flex-wrap gap-4 pb-2">
+                        <div className="flex flex-wrap gap-4 justify-start">
                             {
-                                skillset.items.map((skill, i)=>(<div key={i} className="flex-shrink-0 bg-white rounded-xl shadow-md p-4 w-36 text-center hover:scale-105 transition">
+                                skillset.items.map((skill, i)=>(<div key={i} className="flex-shrink-0 bg-white border border-gray-200 rounded-xl shadow-md p-4 min-w-[130px] text-center hover:scale-105 hover:shadow-lg transition duration-300">
                                     <img src={skill.icon} className="w-12 h-12 mx-auto mb-2" alt={skill.name} />
-                                    <p className="text-sm font-medium">{skill.name}</p>
+                                    <p className="text-sm font-semibold text-gray-700">{skill.name}</p>
                                 </div>))
                             }
                         </div>

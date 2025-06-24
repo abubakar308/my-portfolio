@@ -3,7 +3,7 @@ import AboutPreview from "../components/AboutPreview";
 const Aboutme = () => {
     return (
         <section className="py-12">
-          <AboutPreview  ShowButton={false}/>
+          <AboutPreview  showButton={false}/>
         </section>
     );
 };
