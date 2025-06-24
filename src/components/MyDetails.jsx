@@ -1,3 +1,4 @@
+import { FaCode, FaGraduationCap, FaLaptopCode, FaRocket } from "react-icons/fa";
 
 const MyDetails = () => {
     return (
@@ -5,24 +6,29 @@ const MyDetails = () => {
       <h2 className="text-2xl text-indigo-500 font-bold mb-6">My Journey</h2>
 
       <div className="space-y-4 text-lg leading-relaxed">
-        <p>
-          I started my academic journey with <strong>SSC in 2018</strong> and completed my <strong>HSC in 2020</strong>. 
-          In <strong>2022</strong>, I began my Bachelor's in <strong>Computer Science & Engineering (CSE)</strong>.
-        </p>
+        <div className="flex items-start gap-3">
+          <FaGraduationCap className="mt-1 text-indigo-600" />
+          <p>
+            Completed <strong>SSC in 2018</strong> and <strong>HSC in 2020</strong>. Currently pursuing a <strong>B.Sc. in CSE</strong> at City University, Bangladesh (2022–2026). where I continue to gain theoretical knowledge alongside practical experience.
+          </p>
+        </div>
 
-        <p>
-          Alongside my academic studies, I developed an early interest in programming. 
-          I started learning <strong>C programming</strong> in 2022 and gradually explored other languages and problem solving.
-        </p>
+          {/* Web Development */}
+        <div className="flex items-start gap-3">
+          <FaLaptopCode className="mt-1 text-indigo-600" />
+          <p>
+            In early <strong>2024</strong>, I focused deeply on web development and joined the <strong>Complete Web Development Course</strong> by <strong>Programming Hero</strong>. Through this course, I mastered technologies like <strong>React.js, Tailwind CSS, Node.js, Express.js, MongoDB</strong>, and built several real-world full-stack projects.
+          </p>
+        </div>
 
-        <p>
-          In early <strong>2024</strong>, I focused seriously on web development and enrolled in the 
-          <strong> Programming Hero Web Development course</strong>, which helped me master technologies like React, Tailwind CSS, Node.js, Express, and MongoDB.
-        </p>
 
-        <p>
-          My goal is to continuously grow as a developer and become a <strong>Senior Software Engineer</strong> in the future — someone who not only builds quality applications but also contributes to the tech community.
-        </p>
+       {/* Passion and Goals */}
+        <div className="flex items-start gap-3">
+          <FaRocket className="mt-1 text-indigo-600" />
+          <p>
+            I’m passionate about building applications that solve real-world problems — from e-commerce to education. My future goal is to become a <strong>Senior Software Engineer</strong> who not only builds efficient apps but also contributes to open source, mentors junior developers, and continuously learns to stay ahead in the tech industry.
+          </p>
+        </div>
       </div>
     </section>
     );
