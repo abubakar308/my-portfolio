@@ -1,3 +1,4 @@
+import AboutPreview from "../components/AboutPreview";
 import Contact from "../components/Contact";
 import FeaturedProjects from "../components/featuredProjects";
 import Hero from "../components/Hero";
@@ -8,6 +9,7 @@ const Home = () => {
     return (
         <div>
            <Hero />
+           <AboutPreview />
            <Skills />
           <FeaturedProjects />
           <Contact />
