@@ -2,17 +2,22 @@ import { useState } from "react";
 import { FaComment, FaEnvelope, FaPhone, FaTimes, FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
-    const [isOpen, setIsopen] = useState(false)
+    const [isOpen, setIsopen] = useState(false);
+    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-   const handleSubmit = (e) => {
-    e.preventDefault();
+const handleChange = (e) => {
+  setFormData({ ...formData, [e.target.name]: e.target.value });
+};
 
-
-}
+  const handleSubmit = (e) => {
+  e.preventDefault();
+  alert("Thanks for contacting! I will reach out soon.");
+  setFormData({ name: "", email: "", message: "" });
+};
 
     return (
         <section>
-            <div className="flex justify-between">
+            <div className="flex justify-between transition-all duration-500 transform scale-95 hover:scale-100">
                 <h2 className="text-2xl font-semibold">GOT A PROJECT IN MIND</h2>
                 <button onClick={()=>setIsopen(!isOpen)} className="border-2 p-2 rounded-xl hover:bg-gray-400 cursor-pointer">{isOpen ? <FaTimes /> : "CONTACT ME"}</button>
             </div>
@@ -32,6 +37,8 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
+                value={formData.name}
+  onChange={handleChange}
                 required
                 className="w-full mt-1 p-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your name"
@@ -43,6 +50,8 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
+                value={formData.email}
+  onChange={handleChange}
                 required
                 className="w-full mt-1 p-2 rounded border border-gray-700  focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your email"
@@ -53,6 +62,8 @@ const Contact = () => {
               💭 Message *
               <textarea
                 name="message"
+                value={formData.message}
+  onChange={handleChange}
                 required
                 className="w-full mt-1 p-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Write your message here..."

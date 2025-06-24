@@ -1,9 +1,9 @@
 
 const Aboutme = () => {
     return (
-        <div>
-            about me
-        </div>
+        <section>
+           
+        </section>
     );
 };
 
