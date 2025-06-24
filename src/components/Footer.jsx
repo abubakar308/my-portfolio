@@ -15,7 +15,7 @@ const Footer = () => {
           <p>
             <a
               href="mailto:mdabubakar.dev@gmail.com"
-              className="hover:text-indigo-300 transition"
+              className="hover:text-indigo-400 transition"
             >
               mdabubakar.dev@gmail.com
             </a>

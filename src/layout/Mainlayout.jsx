@@ -15,7 +15,7 @@ const Mainlayout = () => {
            </main>
            
            {/* footer section */}
-           <footer className="bg-white">
+           <footer className="bg-white border-t border-gray-200 py-4">
         <Footer />
            </footer>
             

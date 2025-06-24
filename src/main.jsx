@@ -5,6 +5,7 @@ import Mainlayout from './layout/Mainlayout.jsx';
 import Home from './pages/Home.jsx';
 import Aboutme from './pages/Aboutme.jsx';
 import Projects from './pages/Projects.jsx';
+import NotFound from './components/NotFound.jsx';
 
 createRoot(document.getElementById('root')).render(
 <BrowserRouter>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='aboutme' element={<Aboutme />} />
       <Route path='projects' element={<Projects />} />
       </Route>
+       <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
 )

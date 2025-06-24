@@ -1,8 +1,9 @@
+import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router";
 
 const AboutPreview = ({showButton = true}) => {
     return (
-        <div className="my-10">
+        <div className="">
             <h2 className="text-center text-3xl text-indigo-600 font-semibold mb-6">About Me</h2>
             {/* Intro */}
     <p className="mb-4 text-lg">
@@ -19,9 +20,9 @@ const AboutPreview = ({showButton = true}) => {
         {
             showButton && (
                           <div className="mt-4 text-center">
-          <Link to="/aboutMe" className="inline-block bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition">
-            View More
-          </Link>
+        <Link to="/aboutMe" className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition">
+  View More <FaArrowRight />
+</Link>
         </div>
             )
         }

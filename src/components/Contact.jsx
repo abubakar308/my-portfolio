@@ -33,7 +33,7 @@ const handleChange = (e) => {
 
           <form onSubmit={handleSubmit}>
             <label className="block mb-2 text-base font-medium">
-              👤 Name *
+               Name *
               <input
                 type="text"
                 name="name"
@@ -46,7 +46,7 @@ const handleChange = (e) => {
             </label>
 
             <label className="block mb-2 text-base font-medium">
-              📧 Email *
+               Email *
               <input
                 type="email"
                 name="email"
@@ -59,7 +59,7 @@ const handleChange = (e) => {
             </label>
 
             <label className="block mt-3 mb-2 text-base font-medium">
-              💭 Message *
+               Message *
               <textarea
                 name="message"
                 value={formData.message}
