@@ -43,7 +43,7 @@ const Skills = () => {
                 {
                     skills.map((skillset, index)=>(<div key={index} className="mb-10 text-left">
                         <h3 className="text-xl font-semibold mb-4">{skillset.category}</h3>
-                        <div className="flex overflow-x-auto gap-4 pb-2">
+                        <div className="flex flex-wrap gap-4 pb-2">
                             {
                                 skillset.items.map((skill, i)=>(<div key={i} className="flex-shrink-0 bg-white rounded-xl shadow-md p-4 w-36 text-center hover:scale-105 transition">
                                     <img src={skill.icon} className="w-12 h-12 mx-auto mb-2" alt={skill.name} />
