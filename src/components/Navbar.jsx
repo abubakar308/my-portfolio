@@ -1,29 +1,30 @@
 import { NavLink } from "react-router";
 import logo from "../assets/logo.jpg"
-import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
+import { FaBars, FaFacebook, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 
 const Navbar = () => {
     const [isOpen, setIsopen] = useState(false);
     return (
-            <nav className="shadow-md bg-white fixed w-full backdrop-blur-2xl top-0 z-50">
-               <div className="flex justify-between container mx-auto items-center px-4 sm:px-6 lg:px-8">
+            <nav className="shadow-m fixed w-full">
+               <div className="flex justify-between bg-white rounded-2xl container mx-auto my-2 items-center px-4 sm:px-6 lg:px-8">
+
                  {/* navbar logo */}
                 <NavLink to="/">
-                <img className="w-14 h-14" src={logo} alt={logo} />
+                <img className="w-16 h-16" src={logo} alt={logo} />
                 </NavLink>
 
                 {/* navbar menu for medium and learge device */}
                 <ul className="hidden md:flex gap-6 font-medium">
+                   <li> <NavLink to='/' className={({ isActive }) =>
+    isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
+  }>Home</NavLink></li>
                     <li><NavLink to="/aboutme" className={({ isActive }) =>
     isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
   }>About</NavLink></li>
                     <li><NavLink to='/projects' className={({ isActive }) =>
     isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
   }>Projects</NavLink></li>
-                   <li> <NavLink to='/blogs' className={({ isActive }) =>
-    isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
-  }>Blogs</NavLink></li>
                 </ul>
 
                 {/* social link */}
@@ -34,28 +35,32 @@ const Navbar = () => {
                 <li><a className="hover:text-indigo-500" href="https://github.com/abubakar308" target="_blank">
                 <FaGithub />
                 </a></li>
-                <li><a className="hover:text-indigo-500" href="" target="_blank"></a></li>
+                <li> <a href="https://www.facebook.com/mdabubakar308" target="_blank">
+                    <FaFacebook />
+                </a></li>
                </ul>
-  <button onClick={()=>setIsopen(!isOpen)} className="md:hidden text-2xl">
+
+               {/* nabvar toggle button for mobile */}
+  <button onClick={()=>setIsopen(!isOpen)} className="md:hidden text-2xl cursor-pointer">
                {isOpen ? <FaTimes /> : <FaBars />}
             </button>
                </div>
+
                {/* navbar menu for mobile device */}
-              
-               
                {
                 isOpen && (
-                    <div className="md:hidden fixed top-12 w-1/2 rounded-xl text-xl px-4 pt-4 pb-6 space-y-3 bg-gray-300 shadow">
+                    <div className="md:hidden fixed top-16 w-full rounded-xl text-xl px-4 pt-4 pb-6 space-y-3 bg-gray-300 shadow">
                          <ul className="gap-6 font-medium">
+                          <li> <NavLink to='/' onClick={()=>setIsopen(false)} className={({ isActive }) =>
+    isActive ? "text-indigo-600 font-bold" : "hover:text-indigo-600"
+  }>Home</NavLink></li>
                     <li><NavLink onClick={()=>setIsopen(false)} to="/aboutme" className={({ isActive }) =>
-    isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
+    isActive ? "text-indigo-600 font-bold" : "hover:text-indigo-600"
   }>About</NavLink></li>
                     <li><NavLink onClick={()=>setIsopen(false)} to='/projects' className={({ isActive }) =>
-    isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
+    isActive ? "text-indigo-600 font-bold" : "hover:text-indigo-600"
   }>Projects</NavLink></li>
-                   <li> <NavLink to='/blogs' onClick={()=>setIsopen(false)} className={({ isActive }) =>
-    isActive ? "text-indigo-500 font-bold" : "hover:text-indigo-500"
-  }>Blogs</NavLink></li>
+                   
                 </ul>
 
                 {/* social link */}
@@ -66,7 +71,9 @@ const Navbar = () => {
                 <a className="hover:text-indigo-500" href="https://github.com/abubakar308" target="_blank">
                 <FaGithub />
                 </a>
-                <a href="" target="_blank"></a>
+                <a href="https://www.facebook.com/mdabubakar308" target="_blank">
+                    <FaFacebook />
+                </a>
                </div>
 
                     </div>
