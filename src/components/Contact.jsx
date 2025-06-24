@@ -1,0 +1,114 @@
+import { useState } from "react";
+import { FaComment, FaEnvelope, FaPhone, FaTimes, FaWhatsapp } from "react-icons/fa";
+
+const Contact = () => {
+    const [isOpen, setIsopen] = useState(false)
+
+   const handleSubmit = (e) => {
+    e.preventDefault();
+
+
+}
+
+    return (
+        <section>
+            <div className="flex justify-between">
+                <h2 className="text-2xl font-semibold">GOT A PROJECT IN MIND</h2>
+                <button onClick={()=>setIsopen(!isOpen)} className="border-2 p-2 rounded-xl hover:bg-gray-400 cursor-pointer">{isOpen ? <FaTimes /> : "CONTACT ME"}</button>
+            </div>
+           {
+            isOpen && (
+                 <div className="md:flex justify-between w-full">
+
+                    {/* Contact Form */}
+        <div className="p-6 rounded-xl w-full shadow-lg">
+          <h3 className="text-xl font-semibold mb-4 text-blue-300 flex items-center">
+            <FaComment className="mr-2" /> Comments
+          </h3>
+
+          <form onSubmit={handleSubmit}>
+            <label className="block mb-2 text-base font-medium">
+              👤 Name *
+              <input
+                type="text"
+                name="name"
+                required
+                className="w-full mt-1 p-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter your name"
+              />
+            </label>
+
+            <label className="block mb-2 text-base font-medium">
+              📧 Email *
+              <input
+                type="email"
+                name="email"
+                required
+                className="w-full mt-1 p-2 rounded border border-gray-700  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter your email"
+              />
+            </label>
+
+            <label className="block mt-3 mb-2 text-base font-medium">
+              💭 Message *
+              <textarea
+                name="message"
+                required
+                className="w-full mt-1 p-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Write your message here..."
+                rows="4"
+              />
+            </label>
+
+            <button
+              type="submit"
+              className="w-full mt-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+                 <div className="p-6 w-full rounded-xl shadow-lg">
+          <h3 className="text-xl font-semibold mb-4 text-blue-400">Get in Touch</h3>
+
+          <div className="space-y-4">
+            <div className="flex items-center space-x-3">
+              <FaEnvelope className="text-xl text-blue-400" />
+              <a
+                href="mailto:mdabubakar.dev@gmail.com"
+                className="text-lg text-blue-400 hover:underline"
+                rel="noopener noreferrer"
+              >
+                mdabubakar.dev@gmail.com
+              </a>
+            </div>
+
+            <div className="flex items-center space-x-3">
+              <FaPhone className="text-xl text-blue-400" />
+              <a href="tel:+8801773398308" className="text-lg text-blue-400 hover:underline">
+                +880 1773398308
+              </a>
+            </div>
+
+            <div className="flex items-center space-x-3">
+              <FaWhatsapp className="text-xl text-blue-500" />
+              <a
+                href="https://wa.me/8801773398308?text=Hello%20there!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg text-blue-500 hover:underline"
+              >
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+            </div>
+            )
+           }
+        </section>
+    );
+};
+
+export default Contact;
