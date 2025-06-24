@@ -18,8 +18,8 @@ const handleChange = (e) => {
     return (
         <section>
             <div className="flex justify-between transition-all duration-500 transform scale-95 hover:scale-100">
-                <h2 className="text-2xl font-semibold">GOT A PROJECT IN MIND</h2>
-                <button onClick={()=>setIsopen(!isOpen)} className="border-2 p-2 rounded-xl hover:bg-gray-400 cursor-pointer">{isOpen ? <FaTimes /> : "CONTACT ME"}</button>
+                <h2 className="text-2xl text-indigo-500 font-semibold">GOT A PROJECT IN MIND</h2>
+                <button onClick={()=>setIsopen(!isOpen)} className="border-2 p-2 rounded-xl hover:bg-indigo-400 cursor-pointer">{isOpen ? <FaTimes /> : "CONTACT ME"}</button>
             </div>
            {
             isOpen && (
@@ -27,7 +27,7 @@ const handleChange = (e) => {
 
                     {/* Contact Form */}
         <div className="p-6 rounded-xl w-full shadow-lg">
-          <h3 className="text-xl font-semibold mb-4 text-blue-300 flex items-center">
+          <h3 className="text-xl font-semibold mb-4 text-indigo-400 flex items-center">
             <FaComment className="mr-2" /> Comments
           </h3>
 
@@ -40,7 +40,7 @@ const handleChange = (e) => {
                 value={formData.name}
   onChange={handleChange}
                 required
-                className="w-full mt-1 p-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full mt-1 p-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 placeholder="Enter your name"
               />
             </label>
@@ -53,7 +53,7 @@ const handleChange = (e) => {
                 value={formData.email}
   onChange={handleChange}
                 required
-                className="w-full mt-1 p-2 rounded border border-gray-700  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full mt-1 p-2 rounded border border-gray-700  focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 placeholder="Enter your email"
               />
             </label>
@@ -65,7 +65,7 @@ const handleChange = (e) => {
                 value={formData.message}
   onChange={handleChange}
                 required
-                className="w-full mt-1 p-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full mt-1 p-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 placeholder="Write your message here..."
                 rows="4"
               />
@@ -73,21 +73,21 @@ const handleChange = (e) => {
 
             <button
               type="submit"
-              className="w-full mt-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+              className="w-full mt-4 bg-indigo-300 hover:bg-indigo-500 font-semibold py-2 px-4 rounded-lg cursor-pointer transition duration-300"
             >
               Send Message
             </button>
           </form>
         </div>
                  <div className="p-6 w-full rounded-xl shadow-lg">
-          <h3 className="text-xl font-semibold mb-4 text-blue-400">Get in Touch</h3>
+          <h3 className="text-xl font-semibold mb-4 text-indigo-400">Get in Touch</h3>
 
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <FaEnvelope className="text-xl text-blue-400" />
+              <FaEnvelope className="text-xl text-indigo-400" />
               <a
                 href="mailto:mdabubakar.dev@gmail.com"
-                className="text-lg text-blue-400 hover:underline"
+                className="text-lg text-indigo-400 hover:underline"
                 rel="noopener noreferrer"
               >
                 mdabubakar.dev@gmail.com
@@ -95,19 +95,19 @@ const handleChange = (e) => {
             </div>
 
             <div className="flex items-center space-x-3">
-              <FaPhone className="text-xl text-blue-400" />
-              <a href="tel:+8801773398308" className="text-lg text-blue-400 hover:underline">
+              <FaPhone className="text-xl text-indigo-400" />
+              <a href="tel:+8801773398308" className="text-lg text-indigo-400 hover:underline">
                 +880 1773398308
               </a>
             </div>
 
             <div className="flex items-center space-x-3">
-              <FaWhatsapp className="text-xl text-blue-500" />
+              <FaWhatsapp className="text-xl text-indigo-500" />
               <a
                 href="https://wa.me/8801773398308?text=Hello%20there!"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg text-blue-500 hover:underline"
+                className="text-lg text-indigo-500 hover:underline"
               >
                 Chat on WhatsApp
               </a>

@@ -37,12 +37,12 @@ const Skills = () => {
         <section className="py-10">
             <div className="container mx-auto text-center px-4">
                 {/* skill title */}
-                <h2 className="text-3xl text-indigo-600 font-bold mb-8">My Skills</h2>
+                <h2 className="text-3xl text-indigo-600 font-bold mb-6">My Skills</h2>
 
                  {/* skills */}
                 {
-                    skills.map((skillset, index)=>(<div key={index} className="mb-10 text-left text-indigo-500 font-semibold">
-                        <h3 className="text-xl font-semibold mb-4">{skillset.category}</h3>
+                    skills.map((skillset, index)=>(<div key={index} className="mb-8 text-left text-indigo-500 font-semibold">
+                        <h3 className="text-xl font-semibold mb-3">{skillset.category}</h3>
                         <div className="flex flex-wrap gap-4 justify-start">
                             {
                                 skillset.items.map((skill, i)=>(<div key={i} className="flex-shrink-0 bg-white border border-gray-200 rounded-xl shadow-md p-4 min-w-[130px] text-center hover:scale-105 hover:shadow-lg transition duration-300">

@@ -29,13 +29,13 @@ const Navbar = () => {
 
                 {/* social link */}
                <ul className="hidden md:flex text-2xl gap-4">
-                <li><a href="https://www.linkedin.com/in/abubakar308" target="_blank">
+                <li><a className="hover:text-indigo-500" href="https://www.linkedin.com/in/abubakar308" target="_blank">
                 <FaLinkedin />
                 </a></li>
                 <li><a className="hover:text-indigo-500" href="https://github.com/abubakar308" target="_blank">
                 <FaGithub />
                 </a></li>
-                <li> <a href="https://www.facebook.com/mdabubakar308" target="_blank">
+                <li> <a className="hover:text-indigo-500" href="https://www.facebook.com/mdabubakar308" target="_blank">
                     <FaFacebook />
                 </a></li>
                </ul>
@@ -71,7 +71,7 @@ const Navbar = () => {
                 <a className="hover:text-indigo-500" href="https://github.com/abubakar308" target="_blank">
                 <FaGithub />
                 </a>
-                <a href="https://www.facebook.com/mdabubakar308" target="_blank">
+                <a className="hover:text-indigo-500" href="https://www.facebook.com/mdabubakar308" target="_blank">
                     <FaFacebook />
                 </a>
                </div>

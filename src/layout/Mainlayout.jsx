@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const Mainlayout = () => {
     return (
-        <div className="bg-indigo-300/30 text-gray-800 min-h-screen flex flex-col">
+        <div className="bg-indigo-300/30 min-h-screen">
            <header>
              {/* Navbar section */}
             <Navbar />
