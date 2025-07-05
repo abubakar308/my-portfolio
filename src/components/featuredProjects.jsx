@@ -9,7 +9,7 @@ const FeaturedProjects = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6 text-center">Featured Projects</h2>
 
-        <div className="flex flex-wrap gap-6 justify-center">
+        <div className="grid md:grid-cols-2 gap-6">
          {featured.map((project, i) => (
             <ProjectCard key={i} {...project} />
           ))}
