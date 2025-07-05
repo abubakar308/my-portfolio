@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const AboutPreview = ({showButton = true}) => {
     return (
-        <div className="">
+        <div className="container mx-auto">
             <h2 className="text-center text-3xl text-indigo-600 font-semibold mb-6">About Me</h2>
             {/* Intro */}
     <p className="mb-4 text-lg">

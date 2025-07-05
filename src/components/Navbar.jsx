@@ -6,8 +6,8 @@ import { useState } from "react";
 const Navbar = () => {
     const [isOpen, setIsopen] = useState(false);
     return (
-            <nav className="shadow-m fixed w-full">
-               <div className="flex justify-between bg-white rounded-2xl container mx-auto my-2 items-center px-4 sm:px-6 lg:px-8">
+            <nav className="shadow-m bg-white rounded-2xl my-2 fixed w-full">
+               <div className="flex justify-between container mx-auto items-center px-4 sm:px-6 lg:px-8">
 
                  {/* navbar logo */}
                 <NavLink to="/">

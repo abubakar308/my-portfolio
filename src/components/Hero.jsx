@@ -12,7 +12,6 @@ const Hero = () => {
             </div>
 
              {/*View Resume Buttons */}
-        
             <button className="bg-indigo-500 mt-6 md:ml-4 flex text-white px-4 py-2 rounded hover:bg-indigo-700 transition">
              <a href="https://drive.google.com/file/d/1909-oKKJPFXLi7hQQftmyn06D6pWJmc3/view?usp=sharing" target="_blank"> View Resume</a>
             </button>

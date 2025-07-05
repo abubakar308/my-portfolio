@@ -22,7 +22,7 @@ A responsive and modern portfolio website built with React and Vite to showcase 
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React, Tailwind CSS, DaisyUI
+- **Frontend:** React, Tailwind CSS
 - **Routing:** React Router DOM
 - **Build Tool:** Vite
 - **Deployment:** Netlify
