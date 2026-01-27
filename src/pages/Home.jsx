@@ -1,6 +1,6 @@
 import AboutPreview from "../components/AboutPreview";
 import Contact from "../components/Contact";
-import FeaturedProjects from "../components/featuredProjects";
+import FeaturedProjects from "../components/FeaturedProjects";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 

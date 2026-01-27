@@ -1,48 +1,57 @@
 export const projects = [
-    {
-        name: "MediVendor",
-        stack: ["React", "MongoDB", "Node.js", "Express", "Tailwind CSS"],
-         "image": "https://i.ibb.co/j9h3bV29/Screenshot-2025-06-24-191430.png",
-        description: "MediVendor is an advanced e-commerce platform designed for buying and selling medical equipment. It offers a seamless shopping experience with secure authentication, product management, and a streamlined checkout process.",
-        liveLink: "https://medivendor-2b953.web.app/",
-        github: "https://github.com/abubakar308/medivendor-client",
-        featured: true,
-      },
-    {
-  name: "Learn Together",
-   "image": "https://i.ibb.co.com/jvxVC0wg/Screenshot-2025-03-13-092705.png",
-  stack: ["React", "MongoDB", "Node.js", "Express", "Tailwind CSS", "Firebase"],
-  description: "Learn Together is designed to simplify tutor hiring and promote accessible learning globally. Users can browse tutors by category, book sessions, and manage their learning journey effectively.",
-  liveLink: "https://online-tutor-booking-pla-5a98e.web.app",
-  github: "https://github.com/abubakar308/learn-together-client",
-  featured: true,
-},
-{
-    name: "AllStar Equipment Online Store",
-     "image": "https://i.ibb.co.com/k6PdLstz/Screenshot-2025-03-13-093058.png",
-    stack: ["React", "MongoDB", "Node.js", "Express", "Tailwind CSS", "DaisyUI", "Firebase"],
-  description:
-      "AllStar Equipment Online Store provides an extensive selection of sports gear and fitness equipment. It features secure authentication, an intuitive shopping experience, and a seamless checkout process.",
-    liveLink: "https://sport-equipment-online-store.web.app",
-    github: "https://github.com/abubakar308/AllStar-Equipment-client",
-      featured: false,
+  {
+    name: "Certificate Application Management System",
+    stack: ["React", "TypeScript", "MongoDB", "Node.js", "Express", "Tailwind CSS", "Shadcn UI"],
+    image: "https://i.ibb.co.com/h1LrvM6F/Screenshot-2026-01-28-002224.png",
+    description: "A secure, role-based academic portal designed to automate the manual certificate request and verification process for students and faculty.",
+    liveLink: "https://certificate-management-system-front.vercel.app/",
+    github_client: "https://github.com/abubakar308/certificate-management-client",
+    github_server: "https://github.com/abubakar308/certificate-management-server",
+    challenges: "Engineered a complex multi-level approval workflow that manages state transitions (Pending, Approved, Rejected) across three distinct user roles while ensuring data integrity.",
+    featured: true,
   },
- {
-  name: "Career Advice",
-  image: "https://i.ibb.co/0pCT1Ydm/Screenshot-2025-06-24-191132.png", // অথবা তোমার hosted screenshot link
-  github: "https://github.com/abubakar308/career-addvice",
-  liveLink: "https://career-advice-3eaf3.firebaseapp.com/",
-  description:
-    "A responsive platform offering career advice, resume building, interview prep, and job search assistance. Users can sign up, manage profiles, and book coaching sessions.",
-  stack: [
-    "React",
-    "React Router",
-    "Firebase Auth",
-    "Tailwind CSS",
-    "DaisyUI",
-    "Context API",
-    "React Toastify",
-    "Helmet"
-  ]
-}
-  ];
+  {
+    name: "MediVendor",
+    stack: ["React", "MongoDB", "Node.js", "Express", "Tailwind CSS"],
+    image: "https://i.ibb.co/j9h3bV29/Screenshot-2025-06-24-191430.png",
+    description: "A comprehensive medical e-commerce platform featuring secure payment integration, inventory management, and real-time order tracking.",
+    liveLink: "https://medivendor-2b953.web.app/",
+    github_client: "https://github.com/abubakar308/medivendor-client",
+    github_server: "https://github.com/abubakar308/medivendor-server",
+    challenges: "Implemented complex product filtering and an interactive admin dashboard that synchronizes real-time stock levels with a NoSQL database.",
+    featured: true,
+  },
+  {
+    name: "Learn Together",
+    image: "https://i.ibb.co.com/jvxVC0wg/Screenshot-2025-03-13-092705.png",
+    stack: ["React", "MongoDB", "Node.js", "Express", "Tailwind CSS", "Firebase"],
+    description: "A global tutor booking platform allowing students to browse by expertise, book sessions, and leave authenticated reviews.",
+    liveLink: "https://online-tutor-booking-pla-5a98e.web.app",
+    github_client: "https://github.com/abubakar308/learn-together-client",
+    github_server: "https://github.com/abubakar308/learn-together-server",
+    challenges: "Developed a dynamic booking system with React Router guards to prevent unauthorized access to session history and profile management.",
+    featured: false,
+  },
+  {
+    name: "AllStar Equipment Online Store",
+    image: "https://i.ibb.co.com/k6PdLstz/Screenshot-2025-03-13-093058.png",
+    stack: ["React", "MongoDB", "Node.js", "Express", "Tailwind CSS", "DaisyUI", "Firebase"],
+    description: "An intuitive sports gear marketplace featuring category-wise browsing, secure authentication, and an optimized checkout experience.",
+    liveLink: "https://sport-equipment-online-store.web.app",
+    github_client: "https://github.com/abubakar308/AllStar-Equipment-client",
+    github_server: "https://github.com/abubakar308/AllStar-Equipment-server",
+    challenges: "Optimized state management for the shopping cart and user authentication to ensure a seamless UI across mobile and desktop devices.",
+    featured: false,
+  },
+  {
+    name: "Career Advice",
+    image: "https://i.ibb.co/0pCT1Ydm/Screenshot-2025-06-24-191132.png",
+    stack: ["React", "React Router", "Firebase Auth", "Tailwind CSS", "DaisyUI", "Context API"],
+    description: "A professional platform for career growth, providing resume building tools, interview preparation, and expert coaching session bookings.",
+    liveLink: "https://career-advice-3eaf3.firebaseapp.com/",
+    github_client: "https://github.com/abubakar308/career-addvice",
+    github_server: "#", // Add your server link here if available
+    challenges: "Built a centralized state management system using Context API to handle user profile updates and session bookings across multiple application routes.",
+    featured: false,
+  }
+];

@@ -16,7 +16,7 @@ const handleChange = (e) => {
 };
 
     return (
-        <section>
+        <section id="contact">
             <div className="flex justify-between transition-all duration-500 transform scale-95 hover:scale-100">
                 <h2 className="text-2xl text-indigo-500 font-semibold">GOT A PROJECT IN MIND</h2>
                 <button onClick={()=>setIsopen(!isOpen)} className="border-2 p-2 rounded-xl hover:bg-indigo-400 cursor-pointer">{isOpen ? <FaTimes /> : "CONTACT ME"}</button>

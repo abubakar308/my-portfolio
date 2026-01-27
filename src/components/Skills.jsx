@@ -9,6 +9,7 @@ const Skills = () => {
       { name: "CSS", icon: "https://img.icons8.com/?size=100&id=21278&format=png" },
       { name: "Tailwind CSS", icon: "https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png" },
       { name: "JavaScript", icon: "https://img.icons8.com/?size=100&id=108784&format=png" },
+      { name: "TypeScript", icon: "https://img.icons8.com/typescript" },
       { name: "ReactJS", icon: "https://img.icons8.com/?size=100&id=123603&format=png" },
       { name: "NextJS", icon: "https://img.icons8.com/?size=100&id=yUdJlcKanVbh&format=png" },
     ],
@@ -18,7 +19,9 @@ const Skills = () => {
     items: [
       { name: "Node JS", icon: "https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png" },
       { name: "Express JS", icon: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png" },
+      { name: "Prisma", icon: "https://img.icons8.com/?size=100&id=zJh5Gyrd6ZKu&format=png&color=000000" },
       { name: "MongoDB", icon: "https://img.icons8.com/?size=100&id=74402&format=png" },
+      { name: "PostgreSQL", icon: "https://img.icons8.com/?size=100&id=38561&format=png" },
       { name: "Firebase", icon: "https://img.icons8.com/?size=100&id=62452&format=png" },
     ],
   },
@@ -28,6 +31,7 @@ const Skills = () => {
         { name: "Git", icon: "https://img.icons8.com/?size=100&id=20906&format=png" },
         { name: "GitHub", icon: "https://img.icons8.com/?size=100&id=12599&format=png" },
         { name: "Postman", icon: "https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png" },
+        { name: "Vercel", icon: "https://img.icons8.com/?size=100&id=38283&format=png" },
       ],
   }
 ];
