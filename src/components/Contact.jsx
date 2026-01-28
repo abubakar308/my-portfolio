@@ -1,125 +1,132 @@
 import { useState } from "react";
-import { FaComment, FaEnvelope, FaPhone, FaTimes, FaWhatsapp } from "react-icons/fa";
+import { FaComment, FaEnvelope, FaPhone, FaTimes, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
-    const [isOpen, setIsopen] = useState(false);
-    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [isOpen, setIsopen] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-const handleChange = (e) => {
-  setFormData({ ...formData, [e.target.name]: e.target.value });
-};
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
-  e.preventDefault();
-  alert("Thanks for contacting! I will reach out soon.");
-  setFormData({ name: "", email: "", message: "" });
-};
+    e.preventDefault();
+    alert("Thanks for contacting! I will reach out soon.");
+    setFormData({ name: "", email: "", message: "" });
+  };
 
-    return (
-        <section id="contact">
-            <div className="flex justify-between transition-all duration-500 transform scale-95 hover:scale-100">
-                <h2 className="text-2xl text-indigo-500 font-semibold">GOT A PROJECT IN MIND</h2>
-                <button onClick={()=>setIsopen(!isOpen)} className="border-2 p-2 rounded-xl hover:bg-indigo-400 cursor-pointer">{isOpen ? <FaTimes /> : "CONTACT ME"}</button>
-            </div>
-           {
-            isOpen && (
-                 <div className="md:flex justify-between w-full">
-
-                    {/* Contact Form */}
-        <div className="p-6 rounded-xl w-full shadow-lg">
-          <h3 className="text-xl font-semibold mb-4 text-indigo-400 flex items-center">
-            <FaComment className="mr-2" /> Comments
-          </h3>
-
-          <form onSubmit={handleSubmit}>
-            <label className="block mb-2 text-base font-medium">
-               Name *
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-  onChange={handleChange}
-                required
-                className="w-full mt-1 p-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                placeholder="Enter your name"
-              />
-            </label>
-
-            <label className="block mb-2 text-base font-medium">
-               Email *
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-  onChange={handleChange}
-                required
-                className="w-full mt-1 p-2 rounded border border-gray-700  focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                placeholder="Enter your email"
-              />
-            </label>
-
-            <label className="block mt-3 mb-2 text-base font-medium">
-               Message *
-              <textarea
-                name="message"
-                value={formData.message}
-  onChange={handleChange}
-                required
-                className="w-full mt-1 p-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                placeholder="Write your message here..."
-                rows="4"
-              />
-            </label>
-
-            <button
-              type="submit"
-              className="w-full mt-4 bg-indigo-300 hover:bg-indigo-500 font-semibold py-2 px-4 rounded-lg cursor-pointer transition duration-300"
-            >
-              Send Message
-            </button>
-          </form>
+  return (
+    <section id="contact" className="py-20 px-4 max-w-6xl mx-auto">
+      {/* Header CTA */}
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6 bg-indigo-50 p-8 rounded-2xl mb-10 transition-all duration-300 border border-indigo-100 shadow-sm">
+        <div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight">Got a project in mind?</h2>
+          <p className="text-indigo-600 font-medium mt-2 text-lg italic">Let’s build something amazing together.</p>
         </div>
-                 <div className="p-6 w-full rounded-xl shadow-lg">
-          <h3 className="text-xl font-semibold mb-4 text-indigo-400">Get in Touch</h3>
+        <button 
+          onClick={() => setIsopen(!isOpen)} 
+          className={`flex items-center gap-2 px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-md hover:shadow-indigo-200 cursor-pointer ${isOpen ? "bg-white text-red-500 border border-red-100" : "bg-indigo-600 text-white hover:bg-indigo-700"}`}
+        >
+          {isOpen ? <><FaTimes /> CLOSE</> : "CONTACT ME"}
+        </button>
+      </div>
 
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <FaEnvelope className="text-xl text-indigo-400" />
-              <a
-                href="mailto:mdabubakar.dev@gmail.com"
-                className="text-lg text-indigo-400 hover:underline"
-                rel="noopener noreferrer"
+      {isOpen && (
+        <div className="grid md:grid-cols-2 gap-10 animate-fadeIn">
+          {/* Contact Form */}
+          <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-50">
+            <h3 className="text-xl font-bold mb-6 text-gray-800 flex items-center gap-2">
+              <FaComment className="text-indigo-500" /> Send a Message
+            </h3>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="text-sm font-bold text-gray-600 uppercase tracking-wider">Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full mt-2 p-3 rounded-lg border border-gray-100 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                  placeholder="Your Name"
+                />
+              </div>
+
+              <div>
+                <label className="text-sm font-bold text-gray-600 uppercase tracking-wider">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full mt-2 p-3 rounded-lg border border-gray-100 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                  placeholder="example@gmail.com"
+                />
+              </div>
+
+              <div>
+                <label className="text-sm font-bold text-gray-600 uppercase tracking-wider">Message *</label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="w-full mt-2 p-3 rounded-lg border border-gray-100 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                  placeholder="Describe your project..."
+                  rows="4"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-xl shadow-lg transition duration-300 transform hover:-translate-y-1"
               >
-                mdabubakar.dev@gmail.com
-              </a>
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          {/* Contact Info */}
+          <div className="bg-indigo-900 text-white p-8 rounded-2xl shadow-xl flex flex-col justify-between overflow-hidden relative group">
+            <div className="relative z-10">
+              <h3 className="text-2xl font-bold mb-8">Get in Touch</h3>
+              
+              <div className="space-y-8">
+                <a href="mailto:mdabubakar.dev@gmail.com" className="flex items-center gap-4 hover:translate-x-2 transition-transform">
+                  <div className="bg-indigo-800 p-3 rounded-lg"><FaEnvelope className="text-indigo-300" /></div>
+                  <div>
+                    <p className="text-xs font-bold text-indigo-300 uppercase">Email Me</p>
+                    <p className="text-lg">mdabubakar.dev@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="tel:+8801773398308" className="flex items-center gap-4 hover:translate-x-2 transition-transform">
+                  <div className="bg-indigo-800 p-3 rounded-lg"><FaPhone className="text-indigo-300" /></div>
+                  <div>
+                    <p className="text-xs font-bold text-indigo-300 uppercase">Call Me</p>
+                    <p className="text-lg">+880 1773398308</p>
+                  </div>
+                </a>
+
+                <a href="https://wa.me/8801773398308" target="_blank" className="flex items-center gap-4 hover:translate-x-2 transition-transform">
+                  <div className="bg-green-800/40 p-3 rounded-lg"><FaWhatsapp className="text-green-400" /></div>
+                  <div>
+                    <p className="text-xs font-bold text-green-400 uppercase">WhatsApp</p>
+                    <p className="text-lg">Chat Live</p>
+                  </div>
+                </a>
+              </div>
             </div>
 
-            <div className="flex items-center space-x-3">
-              <FaPhone className="text-xl text-indigo-400" />
-              <a href="tel:+8801773398308" className="text-lg text-indigo-400 hover:underline">
-                +880 1773398308
-              </a>
-            </div>
-
-            <div className="flex items-center space-x-3">
-              <FaWhatsapp className="text-xl text-indigo-500" />
-              <a
-                href="https://wa.me/8801773398308?text=Hello%20there!"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-lg text-indigo-500 hover:underline"
-              >
-                Chat on WhatsApp
-              </a>
-            </div>
+            {/* Subtle background decoration */}
+            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-indigo-800 rounded-full opacity-20 group-hover:scale-110 transition-transform duration-700"></div>
           </div>
         </div>
-
-            </div>
-            )
-           }
-        </section>
-    );
+      )}
+    </section>
+  );
 };
 
 export default Contact;

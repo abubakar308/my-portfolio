@@ -1,4 +1,4 @@
-import { FaExternalLinkAlt, FaGithub, FaCode, FaServer, FaLightbulb } from "react-icons/fa";
+import { FaExternalLinkAlt, FaCode, FaServer, FaLightbulb } from "react-icons/fa";
 
 const ProjectCard = ({ name, image, github_client, github_server, liveLink, description, stack, challenges }) => {
     return (

@@ -2,61 +2,76 @@ import heroImage from "../assets/abubakar.png";
 
 const Hero = () => {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
-
+    <section className="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
       {/* Text Section */}
-      <div className="text-center md:text-left space-y-4">
-        <p className="text-gray-500 text-lg">Hi there 👋</p>
+      <div className="text-center md:text-left space-y-6">
+        <div>
+          <p className="text-indigo-600 font-bold tracking-widest uppercase text-sm mb-2">Available for projects</p>
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900">
+            I'm <span className="text-indigo-600">Md Abu Bakar Siddique</span>
+          </h1>
+        </div>
 
-        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-          I'm{" "}
-          <span className="text-indigo-500">
-            Md Abu Bakar Siddique
-          </span>
-        </h1>
-
-        <h2 className="text-xl md:text-2xl text-gray-700 font-medium">
-          Full Stack Developer (MERN & TypeScript)
+        <h2 className="text-xl md:text-2xl text-gray-700 font-semibold italic">
+          Full Stack Developer | MERN & TypeScript Expert
         </h2>
 
-        <p className="text-gray-600 max-w-lg mx-auto md:mx-0">
-          I build scalable, secure, and user-friendly web applications using
-          modern technologies with real-world problem-solving experience.
+        <p className="text-gray-600 max-w-lg mx-auto md:mx-0 leading-relaxed text-lg">
+          Specializing in building scalable web applications with <span className="font-bold text-gray-800">PostgreSQL, Prisma, and Next.js</span>. Focused on creating secure, role-based systems with high performance.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex justify-center md:justify-start gap-4 pt-4">
+        <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+          {/* Hire Me - Primary Action */}
+          <a
+            href="#contact"
+            className="bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg hover:shadow-indigo-200 transform hover:-translate-y-1"
+          >
+            Hire Me
+          </a>
+
+          {/* View Resume - Secondary Action */}
           <a
             href="https://drive.google.com/file/d/1909-oKKJPFXLi7hQQftmyn06D6pWJmc3/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-indigo-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-600 transition shadow-md"
+            className="border-2 border-indigo-100 text-indigo-600 px-8 py-4 rounded-xl font-bold hover:bg-indigo-50 transition flex items-center gap-2"
           >
             View Resume
-          </a>
-
-          <a
-            href="#contact"
-            className="border border-indigo-500 text-indigo-500 px-6 py-3 rounded-lg font-medium hover:bg-indigo-50 transition"
-          >
-            Contact Me
           </a>
         </div>
       </div>
 
       {/* Image Section */}
-      <div className="relative">
-        <div className="w-64 h-80 rounded-2xl bg-indigo-500/20 flex items-center justify-center rotate-[-6deg] hover:rotate-0 transition-transform duration-500">
+      {/* <div className="relative group">
+        <div className="absolute inset-0 bg-indigo-500 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-500 opacity-20"></div>
+        <div className="w-64 h-80 rounded-2xl  p-2 shadow-2xl relative z-10">
           <img
             src={heroImage}
-            alt="Md Abu Bakar Siddique - Full Stack Developer"
-            className="w-full h-full object-cover rounded-xl shadow-xl"
+            alt="Md Abu Bakar Siddique"
+            className="w-full h-full object-cover rounded-xl"
           />
         </div>
-      </div>
+      </div> */}
 
+      {/* Image Section - Replacing plain bg-white with a modern stack */}
+<div className="relative group">
+  {/* The Background Decorative Shape */}
+  <div className="absolute -inset-4 bg-gradient-to-tr from-indigo-500/20 to-indigo-100/10 rounded-3xl blur-2xl group-hover:scale-110 transition-transform duration-500"></div>
+  
+  {/* The Image Container */}
+  <div className="relative w-64 h-80 rounded-2xl bg-gradient-to-b from-indigo-50 to-white p-2 shadow-2xl border border-indigo-50 transition-transform duration-500 group-hover:rotate-0 rotate-3 overflow-hidden">
+    <img
+      src={heroImage}
+      alt="Md Abu Bakar Siddique"
+      className="w-full h-full object-cover rounded-xl"
+    />
+    
+    {/* Subtle Overlay to blend edges */}
+    <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent pointer-events-none"></div>
+  </div>
+</div>
     </section>
   );
 };
-
 export default Hero;
