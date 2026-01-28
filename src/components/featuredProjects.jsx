@@ -5,7 +5,7 @@ import { Link } from "react-router";
 const FeaturedProjects = () => {
     const featured = projects.filter(project=>project.featured)
     return (
-       <section className="py-12">
+       <section>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6 text-center">Featured Projects</h2>
 
