@@ -2,12 +2,12 @@ import heroImage from "../assets/abubakar.png";
 
 const Hero = () => {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+    <section className="w-full container mx-auto px-6 py-8 md:py-12 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
       {/* Text Section */}
       <div className="text-center md:text-left space-y-6">
         <div>
           <p className="text-indigo-600 font-bold tracking-widest uppercase text-sm mb-2">Available for projects</p>
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900">
+          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-gray-900">
             I'm <span className="text-indigo-600">Md Abu Bakar Siddique</span>
           </h1>
         </div>
@@ -43,34 +43,16 @@ const Hero = () => {
       </div>
 
       {/* Image Section */}
-      {/* <div className="relative group">
-        <div className="absolute inset-0 bg-indigo-500 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-500 opacity-20"></div>
-        <div className="w-64 h-80 rounded-2xl  p-2 shadow-2xl relative z-10">
+      <div className="relative group">
+        <div className="absolute inset-0 bg-indigo-500 rounded-2xl opacity-20"></div>
+        <div className="w-64 h-80 rounded-2xl p-2 shadow-2xl relative z-10">
           <img
             src={heroImage}
             alt="Md Abu Bakar Siddique"
             className="w-full h-full object-cover rounded-xl"
           />
         </div>
-      </div> */}
-
-      {/* Image Section - Replacing plain bg-white with a modern stack */}
-<div className="relative group">
-  {/* The Background Decorative Shape */}
-  <div className="absolute -inset-4 bg-gradient-to-tr from-indigo-500/20 to-indigo-100/10 rounded-3xl blur-2xl group-hover:scale-110 transition-transform duration-500"></div>
-  
-  {/* The Image Container */}
-  <div className="relative w-64 h-80 rounded-2xl bg-gradient-to-b from-indigo-50 to-white p-2 shadow-2xl border border-indigo-50 transition-transform duration-500 group-hover:rotate-0 rotate-3 overflow-hidden">
-    <img
-      src={heroImage}
-      alt="Md Abu Bakar Siddique"
-      className="w-full h-full object-cover rounded-xl"
-    />
-    
-    {/* Subtle Overlay to blend edges */}
-    <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent pointer-events-none"></div>
-  </div>
-</div>
+      </div>
     </section>
   );
 };
