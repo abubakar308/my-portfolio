@@ -1,55 +1,63 @@
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import { Link } from "react-router";
+import { FaFacebook, FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { Link, NavLink } from "react-router";
 
 const Footer = () => {
     return (
-        <div className="container mx-auto px-4 py-10 gap-6">
+        <footer className="bg-gray-50 border-t border-gray-100 pt-12 pb-8">
+            <div className="container mx-auto px-4 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
 
-           <div className="flex flex-col md:flex-row justify-around items-center gap-6">
+                    {/* Column 1: Personal Info */}
+                    <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-indigo-600">Md Abu Bakar Siddique</h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            A passionate Full Stack Developer specializing in building scalable web applications with MERN & TypeScript.
+                        </p>
+                        <div className="space-y-2 text-gray-500">
+                            <p className="flex items-center justify-center md:justify-start gap-2 italic">
+                                <FaMapMarkerAlt className="text-indigo-500" /> Dhaka, Bangladesh
+                            </p>
+                            <a href="mailto:mdabubakar.dev@gmail.com" className="flex items-center justify-center md:justify-start gap-2 hover:text-indigo-600 transition">
+                                <FaEnvelope className="text-indigo-500" /> mdabubakar.dev@gmail.com
+                            </a>
+                        </div>
+                    </div>
 
-            {/* Column 1: Personal Info */}
-        <div className="space-y-2 text-sm">
-          <h3 className="text-lg font-bold text-indigo-500">Md Abu Bakar Siddique</h3>
-          <p>A passionate MERN stack web developer.</p>
-          <p> Dhaka, Bangladesh</p>
-          <p>
-            <a
-              href="mailto:mdabubakar.dev@gmail.com"
-              className="hover:text-indigo-400 transition"
-            >
-              mdabubakar.dev@gmail.com
-            </a>
-          </p>
-        </div>
-        
-             {/* menu links */}
-            <div className="text-sm font-medium space-y-2">
-                <h3 className="text-lg  text-indigo-500 font-semibold mb-1">Menu</h3>
-                 <Link to='/' className="block hover:text-indigo-300 transition">Home</Link>
-                <Link to="/aboutme" className="block hover:text-indigo-300 transition">About</Link>
-                 <Link to='/projects' className="block hover:text-indigo-300 transition">Projects</Link>
-            </div>
+                    {/* Column 2: Quick Links */}
+                    <div className="flex flex-col space-y-4">
+                        <h3 className="text-lg font-bold text-gray-800">Quick Links</h3>
+                        <nav className="flex flex-col space-y-2 font-medium text-gray-600">
+                            <Link to='/' className="hover:text-indigo-600 transition">Home</Link>
+                            <Link to="/aboutme" className="hover:text-indigo-600 transition">About Me</Link>
+                            <Link to='/projects' className="hover:text-indigo-600 transition">Projects Portfolio</Link>
+                            <NavLink to="/#contact" className="hover:text-indigo-600 transition">Contact Me</NavLink>
+                        </nav>
+                    </div>
 
-            {/* social links */}
-            <div className="text-lg flex flex-col font-medium gap-2">
-                <h3 className="font-semibold text-indigo-500 mb-1">Social</h3>
-                <a className="hover:text-indigo-400 transition" href="https://www.linkedin.com/in/abubakar308" target="_blank" >
+                    {/* Column 3: Social Connectivity */}
+                    <div className="space-y-4">
+                        <h3 className="text-lg font-bold text-gray-800">Connect With Me</h3>
+                        <div className="flex justify-center md:justify-start gap-6 text-2xl text-gray-600">
+                            <a className="hover:text-indigo-600 transition transform hover:-translate-y-1" href="https://www.linkedin.com/in/abubakar308" target="_blank">
                                 <FaLinkedin />
-                                </a>
-                                <a className="hover:text-indigo-400 transition" href="https://github.com/abubakar308" target="_blank">
+                            </a>
+                            <a className="hover:text-indigo-600 transition transform hover:-translate-y-1" href="https://github.com/abubakar308" target="_blank">
                                 <FaGithub />
-                                </a>
-                                <a href="https://www.facebook.com/mdabubakar308" target="_blank">
-                    <FaFacebook />
-                </a>
+                            </a>
+                            <a className="hover:text-indigo-600 transition transform hover:-translate-y-1" href="https://www.facebook.com/mdabubakar308" target="_blank">
+                                <FaFacebook />
+                            </a>
+                        </div>
+                        <p className="text-sm text-gray-500 pt-2">Let's build something amazing together.</p>
+                    </div>
+                </div>
+
+                {/* Bottom Copyright */}
+                <div className="border-t border-gray-200 mt-12 pt-8 text-center text-sm text-gray-500">
+                    <p>© {new Date().getFullYear()} Md Abu Bakar Siddique. All rights reserved.</p>
+                </div>
             </div>
-           </div>
-
-            <div className="text-center text-sm text-gray-600 mt-6">
-        © {new Date().getFullYear()} Md Abu Bakar Siddique. All rights reserved.
-      </div>
-
-        </div>
+        </footer>
     );
 };
 

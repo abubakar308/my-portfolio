@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import heroImage from "../assets/abubakar.png";
 
 const Hero = () => {
@@ -23,12 +24,12 @@ const Hero = () => {
         {/* CTA Buttons */}
         <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
           {/* Hire Me - Primary Action */}
-          <a
-            href="#contact"
-            className="bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg hover:shadow-indigo-200 transform hover:-translate-y-1"
+          <NavLink
+             to="/#contact"
+            className="bg-indigo-600 text-white px-6 py-4 rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg hover:shadow-indigo-200 transform hover:-translate-y-1"
           >
             Hire Me
-          </a>
+          </NavLink>
 
           {/* View Resume - Secondary Action */}
           <a
