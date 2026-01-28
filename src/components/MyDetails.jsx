@@ -1,36 +1,53 @@
-import { FaCode, FaGraduationCap, FaLaptopCode, FaRocket } from "react-icons/fa";
+import { FaCode, FaGraduationCap, FaLaptopCode, FaRocket, FaDatabase } from "react-icons/fa";
 
 const MyDetails = () => {
     return (
-        <section className="py-10 px-4 rounded-xl shadow-md">
-      <h2 className="text-2xl text-indigo-500 font-bold mb-6">My Journey</h2>
+        <section className="py-12 px-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+            <h2 className="text-3xl text-indigo-600 font-bold mb-8 flex items-center gap-2">
+                <FaCode /> My Journey
+            </h2>
 
-      <div className="space-y-4 text-lg leading-relaxed">
-        <div className="flex items-start gap-3">
-          <FaGraduationCap className="mt-1 text-indigo-600" />
-          <p>
-            Completed <strong>SSC in 2018</strong> and <strong>HSC in 2020</strong>. Currently pursuing a <strong>B.Sc. in CSE</strong> at City University, Bangladesh (2022–2026). where I continue to gain theoretical knowledge alongside practical experience.
-          </p>
-        </div>
+            <div className="space-y-8 text-lg leading-relaxed text-gray-700">
+                {/* Education Section */}
+                <div className="flex items-start gap-4 group">
+                    <div className="p-3 bg-indigo-50 rounded-lg group-hover:bg-indigo-600 transition-colors duration-300">
+                        <FaGraduationCap className="text-indigo-600 group-hover:text-white" />
+                    </div>
+                    <div>
+                        <h3 className="font-bold text-gray-800">Academic Foundation</h3>
+                        <p>
+                            Completed <strong>SSC in 2018</strong> and <strong>HSC in 2020</strong>. Currently pursuing a <strong>B.Sc. in CSE</strong> at <strong>City University, Bangladesh</strong> (2022–2026). My academic journey has provided a strong foundation in core computer science principles and problem-solving.
+                        </p>
+                    </div>
+                </div>
 
-          {/* Web Development */}
-        <div className="flex items-start gap-3">
-          <FaLaptopCode className="mt-1 text-indigo-600" />
-          <p>
-            In early <strong>2024</strong>, I focused deeply on web development and joined the <strong>Complete Web Development Course</strong> by <strong>Programming Hero</strong>. Through this course, I mastered technologies like <strong>React.js, Tailwind CSS, Node.js, Express.js, MongoDB</strong>, and built several real-world full-stack projects.
-          </p>
-        </div>
+                {/* Technical Evolution */}
+                <div className="flex items-start gap-4 group">
+                    <div className="p-3 bg-indigo-50 rounded-lg group-hover:bg-indigo-600 transition-colors duration-300">
+                        <FaLaptopCode className="text-indigo-600 group-hover:text-white" />
+                    </div>
+                    <div>
+                        <h3 className="font-bold text-gray-800">MERN Stack & Beyond</h3>
+                        <p>
+                            In 2024, I completed the <strong>Complete Web Development Course</strong> by <strong>Programming Hero</strong>, mastering <strong>React, Node.js, and MongoDB</strong>. I have since evolved into <strong>TypeScript</strong> and modern ORMs like <strong>Prisma</strong> with <strong>PostgreSQL</strong> to build more secure and scalable architectures.
+                        </p>
+                    </div>
+                </div>
 
-
-       {/* Passion and Goals */}
-        <div className="flex items-start gap-3">
-          <FaRocket className="mt-1 text-indigo-600" />
-          <p>
-            I’m passionate about building applications that solve real-world problems — from e-commerce to education. My future goal is to become a <strong>Senior Software Engineer</strong> who not only builds efficient apps but also contributes to open source, mentors junior developers, and continuously learns to stay ahead in the tech industry.
-          </p>
-        </div>
-      </div>
-    </section>
+                {/* Professional Goals */}
+                <div className="flex items-start gap-4 group">
+                    <div className="p-3 bg-indigo-50 rounded-lg group-hover:bg-indigo-600 transition-colors duration-300">
+                        <FaRocket className="text-indigo-600 group-hover:text-white" />
+                    </div>
+                    <div>
+                        <h3 className="font-bold text-gray-800">Vision & Impact</h3>
+                        <p>
+                            I specialize in building <strong>enterprise-level applications</strong> with multi-step approval workflows and role-based access. My ultimate goal is to become a <strong>Senior Software Engineer</strong>, contributing to robust open-source projects and building tools that make a meaningful impact on the global tech ecosystem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 };
 
